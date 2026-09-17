@@ -1,8 +1,172 @@
-    .attribution {
-      font-size: 0.6875rem;
-      text-align: center;
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    background-color: hsl(229, 57%, 11%);
+    background-image: url("./images/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 50%;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .row {
+    width: 950px;
+    max-width: 100%;
+}
+
+
+
+.fylo-card {
+    background-color: hsl(228, 56%, 26%);
+    padding: 40px;
+    border-radius: 10px 100px 10px 10px;
+    height: 200px;
+}
+
+.fylo-card > img {
+    margin-bottom: 30px;
+}
+
+.icon-button {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 10px;
+    background-color: hsl(229, 57%, 11%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.storage-card {
+    position: relative;
+    background-color: hsl(228, 56%, 26%);
+    color: hsl(243, 100%, 93%);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.storage-card p {
+    margin-bottom: 15px;
+}
+
+.progress {
+    height: 20px;
+    padding: 3px;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    width: 81.5%;
+    background: linear-gradient(
+        to right,
+        hsl(6, 100%, 80%),
+        hsl(335, 100%, 65%)
+    );
+    border-radius: 10px;
+    position: relative;
+}
+
+.progress-bar::after {
+    content: "";
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.storage-left {
+    position: absolute;
+    right: 40px;
+    top: -55px;
+    background-color: white;
+    color: hsl(229, 57%, 11%);
+    padding: 15px 22px;
+    border-radius: 10px 10px 0 10px;
+    white-space: nowrap;
+}
+
+.storage-left::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    border-top: 20px solid white;
+    border-left: 20px solid transparent;
+}
+
+.storage-left strong {
+    font-size: 40px;
+}
+
+.storage-left span {
+    color: hsl(229, 7%, 55%);
+    font-weight: 700;
+    margin-left: 8px;
+}
+
+.attribution {
+    position: fixed;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+    color: hsl(243, 100%, 93%);
+}
+
+@media (max-width: 767px) {
+
+    body {
+        background-image: url("./images/bg-mobile.png");
+        background-size: cover;
+        background-position: center;
     }
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
+    main {
+        padding: 24px;
     }
+
+    main .row {
+        width: 100%;
+        margin: 0;
+    }
+
+    .fylo-card {
+        width: 100%;
+        height: auto;
+        padding: 40px;
+    }
+
+    .storage-card {
+        width: 100%;
+        padding: 32px;
+        text-align: center;
+        margin-bottom: 45px;
+    }
+
+    .storage-left {
+        top: auto;
+        bottom: -45px;
+        right: 50%;
+        transform: translateX(50%);
+        border-radius: 10px;
+    }
+
+    .storage-left::after {
+        display: none;
+    }
+}

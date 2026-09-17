@@ -1,104 +1,112 @@
-# Frontend Mentor - Fylo data storage component
+# Frontend Mentor - Fylo Data Storage Component Solution
 
-![Design preview for the Fylo data storage component coding challenge](preview.jpg)
+This is my solution to the [Fylo Data Storage Component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/fylo-data-storage-component-1dZPRbV5n). The goal of this project was to recreate the provided design using HTML, CSS, and Bootstrap and make it responsive for desktop and mobile screens.
 
-## Welcome! 👋
+## Table of Contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The Challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My Process](#my-process)
+  - [Built With](#built-with)
+  - [What I Learned](#what-i-learned)
+  - [Continued Development](#continued-development)
+  - [Useful Resources](#useful-resources)
+  - [AI Collaboration](#ai-collaboration)
+- [Reflection](#reflection)
+- [Author](#author)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+### The Challenge
 
-## The challenge
+Users should be able to:
 
-Your challenge is to build out this data storage component and get it looking as close to the design as possible.
+- View the optimal layout for the component depending on their device's screen size
+- View the desktop layout with the Fylo and storage cards side by side
+- View the mobile layout with the cards stacked vertically
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+### Screenshot
 
-Your users should be able to:
+![Fylo Data Storage Component](./images/screenshot.png)
 
-- View the optimal layout for the site depending on their device's screen size
+### Links
 
-### Want some support on the challenge? 
+- Solution URL: Add Frontend Mentor solution URL here
+- Live Site URL: Add live site URL here
 
-[Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+## My Process
 
-## Where to find everything
+I started by breaking the design into two main sections: the Fylo card and the storage card. I used Bootstrap's grid system to put the cards side by side on desktop and stack them on mobile.
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+Once I had the basic structure working, I used custom CSS to get closer to the actual design. That included the colors, background images, rounded corners, icon buttons, progress bar, gradient, and the 185 GB storage indicator.
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+I focused on getting the overall layout working first and then worked through the smaller design details.
 
-If you would like the Figma design file to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+### Built With
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+- Semantic HTML5
+- CSS
+- Bootstrap 5
+- Bootstrap Grid
+- Bootstrap utility classes
+- Flexbox
+- Media queries
+- Responsive design
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+### What I Learned
 
-## Using AI coding assistants
+The biggest thing I learned from this project was how Bootstrap and custom CSS can work together. I'm still getting used to figuring out what I should let Bootstrap handle and what I need to style myself.
 
-We've included two files to help you if you're using AI coding assistants (like Claude, GitHub Copilot, Cursor, etc.) while working on this challenge:
+For example, I used Bootstrap's responsive grid classes to control how the two cards behave at different screen sizes:
 
-- `AGENTS.md` - Contains detailed instructions for AI assistants on how to help you with this challenge. It's tailored to this challenge's difficulty level, so the AI will provide guidance appropriate to your learning stage—offering more support for beginner challenges and encouraging more independence on advanced ones.
-- `CLAUDE.md` - A pointer file that directs Claude-based tools to the AGENTS.md instructions.
+```html
+<div class="col-12 col-md-5">
+```
 
-**How to use them:** You don't need to do anything! These files are automatically detected by most AI coding tools. The AI will read them and adjust its behavior to be a better learning partner—guiding you toward solutions rather than just giving you the answers.
+and
 
-**Note:** These files are designed to help you *learn*, not to do the work for you. The AI is instructed to ask questions, give hints, and explain concepts rather than writing complete solutions.
+```html
+<div class="col-12 col-md-7">
+```
 
-## Building your project
+On smaller screens, both columns take up the full width and stack. At the `md` breakpoint and above, they divide the row into separate columns.
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+I also got more practice using custom CSS for design details that Bootstrap could not recreate exactly, especially the gradient progress bar and the storage indicator.
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+One thing I learned during this project is that making something responsive and making it accurately match the responsive design are not necessarily the same thing. My layout responds at different screen sizes, but I would still like to improve the proportions of the mobile version.
 
-## Deploying your project
+### Continued Development
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+I want to keep practicing Bootstrap until using the grid system and utility classes feels more natural. Right now, I still have to think through whether Bootstrap or custom CSS makes more sense for different parts of a design.
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+I also want more practice recreating responsive designs accurately. The mobile proportions were one of the harder parts of this project and are still not as close to the reference as I would like.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://www.frontendmentor.io/guides/hosting-your-solution).
+This project was also more difficult without access to the Figma design file. In previous projects, I was able to inspect exact measurements, spacing, sizing, border radius, and other values instead of estimating them from an image. I want to continue getting better at both working from Figma and recreating designs when those exact values are not available.
 
-## Create a custom `README.md`
+### Useful Resources
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+- [Bootstrap Documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/) - I used Bootstrap for the responsive grid, layout, spacing, and utility classes.
+- [Frontend Mentor](https://www.frontendmentor.io/) - The challenge files and reference designs were provided by Frontend Mentor.
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+### AI Collaboration
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+### AI Collaboration
 
-## Submitting your solution
+I used ChatGPT mainly as a tutor and debugging assistant to help me understand Bootstrap and troubleshoot layout issues.
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://www.frontendmentor.io/guides/how-to-submit-solutions) for tips on how to do this.
+I'm also working on relying less on AI as I become more comfortable with the concepts. My goal is to use it when I'm stuck or need something explained, rather than as my first step when solving a problem.
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+## Reflection
 
-## Sharing your solution
+The biggest challenge for me on this project was Bootstrap. I'm still getting used to figuring out what I should let Bootstrap handle and what I need to do with custom CSS. I was able to use the Bootstrap grid to make the two cards sit beside each other on desktop and stack on mobile, but getting the design itself to match the reference took more work.
 
-There are multiple places you can share your solution:
+The mobile proportions still aren't as accurate as I would like them to be. This project was also more difficult without access to the Figma file. I've gotten used to being able to inspect exact measurements, spacing, and sizing in Figma instead of guessing from an image.
 
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community). 
-2. Share on [X (formerly Twitter)](https://x.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in your post. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on [LinkedIn](https://www.linkedin.com/company/frontend-mentor/).
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+I approached the project by getting the main layout working first and then working through the individual design details. If I had more time, I would focus mostly on getting the mobile proportions closer to the original design.
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+## Author
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+- GitHub - [Ebony Mitchell](https://github.com/ebonymitchell)
+- Frontend Mentor - https://www.frontendmentor.io/profile/ebonymitchell
