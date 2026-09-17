@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://github.com/ebonymitchell/sba-4
-- Live Site URL: https://ebonymitchell.github.io/sba-4/
+- Solution URL: [Frontend Mentor solution URL](https://www.frontendmentor.io/solutions/fylo-data-storage-component-Hsj3qI2sgc)
+- Live Site URL: [Live Site URL](https://ebonymitchell.github.io/sba-4/)
 
 ## My Process
 
